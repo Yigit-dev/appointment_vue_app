@@ -3,7 +3,7 @@
     <SideBar />
     <div class="wrapper">
       <Header />
-      <main>
+      <main class="pageAnimation">
         <slot />
       </main>
     </div>

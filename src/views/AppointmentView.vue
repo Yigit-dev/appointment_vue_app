@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section id="appointment" class="pageAnimation">
     <h1>Appointment</h1>
-  </div>
+  </section>
 </template>

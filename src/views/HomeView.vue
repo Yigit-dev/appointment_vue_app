@@ -1,5 +1,7 @@
 <template>
-  <h1>HOME</h1>
+  <section id="home" class="pageAnimation">
+    <h1>HOME</h1>
+  </section>
 </template>
 
 <script>

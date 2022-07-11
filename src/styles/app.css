@@ -64,5 +64,17 @@ a:focus {
 }
 
 .pageAnimation {
-  animation: bottom 0.8s var(--delay) both;
+  animation: bottom 0.8s 0s both;
+}
+
+@keyframes bottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
