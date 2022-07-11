@@ -4,18 +4,22 @@
     <a class="logo-expand" href="#">Lifesycle</a>
     <div class="side-wrapper">
       <div class="side-menu">
-        <a class="sidebar-link discover is-active" href="#">
+        <router-link to="/" class="sidebar-link home" active-class="is-active">
           <font-awesome-icon icon="fa-solid fa-house" />
           Home
-        </a>
-        <a class="sidebar-link trending" href="#">
+        </router-link>
+        <router-link
+          to="/appointment"
+          class="sidebar-link appointment"
+          active-class="is-active"
+        >
           <font-awesome-icon icon="fa-solid fa-calendar-check" />
           Appointments
-        </a>
-        <a class="sidebar-link" href="#">
+        </router-link>
+        <router-link to="/create" class="sidebar-link" active-class="is-active">
           <font-awesome-icon icon="fa-solid fa-plus" />
           Create
-        </a>
+        </router-link>
       </div>
     </div>
     <div class="side-wrapper">
