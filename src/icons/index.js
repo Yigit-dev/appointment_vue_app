@@ -10,6 +10,9 @@ import {
   faBell,
   faAngleDown,
   faMagnifyingGlass,
+  faClock,
+  faPen,
+  faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default () => {
@@ -22,6 +25,9 @@ export default () => {
     faSun,
     faBell,
     faAngleDown,
-    faMagnifyingGlass
+    faMagnifyingGlass,
+    faClock,
+    faPen,
+    faTrash
   );
 };

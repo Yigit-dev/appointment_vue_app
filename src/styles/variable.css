@@ -7,7 +7,7 @@
   --border-color: #e4e4e4;
   --c-input: #e4e4e4;
   --c-icon: #fff;
-
+  --c-appointment: #f5f5f7;
   /* STANDARD */
   --c-disable: #b8b8b8;
   --brand-color: #e72787;
@@ -27,4 +27,5 @@
   --c-icon: #808191;
   --border-color: #a0a0a0;
   --c-input: #353340;
+  --c-appointment: #242731;
 }
