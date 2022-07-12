@@ -9,7 +9,9 @@
     </div>
     <div class="user-settings">
       <Avatar size="40" />
-      <div class="user-name">Yigit</div>
+      <div class="user-name">
+        <CustomText size="m">Yigit</CustomText>
+      </div>
       <font-awesome-icon icon="fa-solid fa-angle-down" />
       <div class="notify">
         <div class="notification"></div>
@@ -21,7 +23,8 @@
 
 <script>
 import Avatar from "@/components/Avatar.vue";
-export default { components: { Avatar } };
+import CustomText from "@/components/CustomText.vue";
+export default { components: { Avatar, CustomText } };
 </script>
 
 <style lang="scss" scoped>

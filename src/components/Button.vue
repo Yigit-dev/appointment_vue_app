@@ -1,6 +1,5 @@
 <template>
   <button :style="{ 'background-color': color }" :class="size">
-    <!--slot: react tarafındaki children-->
     <slot />
   </button>
 </template>

@@ -1,12 +1,14 @@
 <template>
   <div class="sidebar">
     <span class="logo">LS</span>
-    <a class="logo-expand" href="#">Mini CRM</a>
+    <a class="logo-expand" href="#">
+      <CustomText size="xl">Mini CRM</CustomText>
+    </a>
     <div class="side-wrapper">
       <div class="side-menu">
         <router-link to="/" class="sidebar-link home" active-class="is-active">
           <font-awesome-icon icon="fa-solid fa-house" />
-          Home
+          <CustomText size="m">Home</CustomText>
         </router-link>
         <router-link
           to="/appointment"
@@ -14,11 +16,11 @@
           active-class="is-active"
         >
           <font-awesome-icon icon="fa-solid fa-calendar-check" />
-          Appointments
+          <CustomText size="m">Appointments</CustomText>
         </router-link>
         <router-link to="/create" class="sidebar-link" active-class="is-active">
           <font-awesome-icon icon="fa-solid fa-plus" />
-          Create
+          <CustomText size="m">Create</CustomText>
         </router-link>
       </div>
     </div>
@@ -28,12 +30,6 @@
           <font-awesome-icon icon="fa-solid fa-user" />
         </a>
         <ThemeButton />
-        <!-- <a class="sidebar-link" href="#">
-          <font-awesome-icon icon="fa-solid fa-moon" />
-        </a>
-        <a class="sidebar-link" href="#">
-          <font-awesome-icon icon="fa-solid fa-sun" />
-        </a> -->
       </div>
     </div>
   </div>
@@ -41,7 +37,8 @@
 
 <script>
 import ThemeButton from "../components/ThemeButton.vue";
-export default { components: { ThemeButton } };
+import CustomText from "@/components/CustomText.vue";
+export default { components: { ThemeButton, CustomText } };
 </script>
 
 <style lang="scss" scoped>

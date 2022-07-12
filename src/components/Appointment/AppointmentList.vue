@@ -5,13 +5,13 @@
         <Avatar size="50" />
       </div>
       <div class="title">
-        <h3>Analog</h3>
-        <p>by gordon norman</p>
+        <CustomText tag="h3" size="l">Analog</CustomText>
+        <CustomText size="s">by yigit cakmak</CustomText>
       </div>
     </div>
     <div class="time">
       <font-awesome-icon icon="fa-solid fa-clock" />
-      <span>3h 15m</span>
+      <CustomText size="s">3h 15m</CustomText>
     </div>
     <div class="actions">
       <Button color="var(--c-softBlue)" size="xxsmall">
@@ -27,8 +27,9 @@
 <script>
 import Avatar from "../Avatar.vue";
 import Button from "../Button.vue";
+import CustomText from "../CustomText.vue";
 export default {
-  components: { Avatar, Button },
+  components: { Avatar, Button, CustomText },
 };
 </script>
 
@@ -38,7 +39,6 @@ li {
   width: 100%;
   max-width: 600px;
   padding: 30px 2px;
-  // height: 80px;
   border-radius: 16px;
   display: flex;
   justify-content: space-around;
