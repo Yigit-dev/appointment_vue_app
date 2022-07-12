@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar">
     <span class="logo">LS</span>
-    <a class="logo-expand" href="#">Lifesycle</a>
+    <a class="logo-expand" href="#">Mini CRM</a>
     <div class="side-wrapper">
       <div class="side-menu">
         <router-link to="/" class="sidebar-link home" active-class="is-active">
@@ -27,19 +27,21 @@
         <a class="sidebar-link" href="#">
           <font-awesome-icon icon="fa-solid fa-user" />
         </a>
-        <a class="sidebar-link" href="#">
+        <ThemeButton />
+        <!-- <a class="sidebar-link" href="#">
           <font-awesome-icon icon="fa-solid fa-moon" />
         </a>
         <a class="sidebar-link" href="#">
           <font-awesome-icon icon="fa-solid fa-sun" />
-        </a>
+        </a> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import ThemeButton from "../components/ThemeButton.vue";
+export default { components: { ThemeButton } };
 </script>
 
 <style lang="scss" scoped>
@@ -58,7 +60,6 @@ export default {};
     display: none;
     width: 30px;
     height: 30px;
-    background-color: #000;
     flex-shrink: 0;
     color: #fff;
     align-items: center;
@@ -67,7 +68,7 @@ export default {};
 
     &-expand {
       text-decoration: none;
-      color: #fff;
+      color: var(--c-text);
       font-size: 19px;
       font-weight: 600;
       line-height: 34px;
@@ -78,7 +79,6 @@ export default {};
         position: absolute;
         top: -30px;
         left: 0;
-        background: var(--theme-bg);
         width: 200px;
         height: 70px;
         z-index: -1;
@@ -88,21 +88,23 @@ export default {};
   &-link {
     &:hover,
     &.is-active {
-      color: #fff;
-      font-weight: 600;
+      color: var(--c-text);
       &:nth-child(2n + 1) {
         svg {
-          background: #fdad00;
+          background: var(--c-orange);
+          color: white;
         }
       }
       &:nth-child(2n) {
         svg {
-          background: #32a7e2;
+          background: var(--c-softBlue);
+          color: white;
         }
       }
       &:nth-child(2n + 3) {
         svg {
-          background: #6c5ecf;
+          background: var(--c-purple);
+          color: white;
         }
       }
     }
@@ -146,6 +148,9 @@ export default {};
     align-items: center;
     text-decoration: none;
     color: var(--body-color);
+    svg {
+      color: var(--c-disable);
+    }
     & + a {
       margin-top: 36px;
     }
@@ -158,7 +163,7 @@ export default {};
     flex-shrink: 0;
     margin-right: 16px;
     &:hover {
-      color: #fff;
+      color: var(--c-text);
     }
   }
 }

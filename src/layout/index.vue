@@ -25,6 +25,7 @@ export default {
 .container {
   position: relative;
   background-color: var(--theme-bg);
+  transition: background-color 0.5s;
   width: 100%;
   height: 95vh;
   display: flex;

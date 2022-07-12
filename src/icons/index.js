@@ -9,6 +9,7 @@ import {
   faSun,
   faBell,
   faAngleDown,
+  faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default () => {
@@ -20,6 +21,7 @@ export default () => {
     faMoon,
     faSun,
     faBell,
-    faAngleDown
+    faAngleDown,
+    faMagnifyingGlass
   );
 };

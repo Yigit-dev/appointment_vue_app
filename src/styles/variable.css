@@ -1,13 +1,30 @@
 :root {
-  --theme-bg: #1a1a1a;
+  --theme-bg: #fdfdfd;
   --theme-main-bg: #1f1f1f;
   --body-color: #808191;
-  --button-bg: #353340;
-  --border-color: #a0a0a0;
+  --c-text: #0c0b0b;
+  --button-bg: #2547f4;
+  --border-color: #e4e4e4;
+  --c-input: #e4e4e4;
+  --c-icon: #fff;
+
+  /* STANDARD */
+  --c-disable: #b8b8b8;
   --brand-color: #e72787;
   --c-orange: #fdad00;
   --c-softBlue: #32a7e2;
   --c-purple: #6c5ecf;
-
+  --c-red: #ec5252;
   --delay: 0s;
+}
+
+[data-theme="dark"] {
+  --theme-bg: #1a1a1a;
+  --theme-main-bg: #1f1f1f;
+  --body-color: #808191;
+  --c-text: #fff;
+  --button-bg: #353340;
+  --c-icon: #808191;
+  --border-color: #a0a0a0;
+  --c-input: #353340;
 }

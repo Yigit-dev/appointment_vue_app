@@ -56,7 +56,11 @@ body {
     background-position: 0% 50%;
   }
 }
-
+input,
+button,
+a,
+input:focus,
+button:focus,
 a:focus {
   outline: none;
   box-shadow: none;

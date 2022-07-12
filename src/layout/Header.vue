@@ -2,6 +2,9 @@
   <!-- SEARCH -->
   <div class="header">
     <div class="search-bar">
+      <div class="search-icon">
+        <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+      </div>
       <input type="text" placeholder="Search" />
     </div>
     <div class="user-settings">
@@ -29,26 +32,37 @@ export default { components: { Avatar } };
   padding: 30px;
 }
 .search-bar {
+  position: relative;
   height: 34px;
   display: flex;
   width: 100%;
   max-width: 450px;
+  .search-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--c-body-color);
+  }
   input {
+    cursor: pointer;
     width: 100%;
     height: 100%;
     border: none;
-    background-color: var(--button-bg);
+    background-color: var(--c-input);
     border-radius: 8px;
-    font-family: var(--body-font);
     font-size: 14px;
     font-weight: 500;
     padding: 0 40px 0 16px;
     box-shadow: 0 0 0 2px rgba(134, 140, 160, 0.02);
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56.966 56.966' fill='%23717790c7'%3e%3cpath d='M55.146 51.887L41.588 37.786A22.926 22.926 0 0046.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 00.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z'/%3e%3c/svg%3e");
-    background-size: 14px;
-    background-repeat: no-repeat;
-    background-position: 96%;
-    color: #fff;
+    color: var(--c-text);
+    &::placeholder {
+      color: var(--c-disable);
+    }
   }
 }
 .user {
@@ -77,7 +91,7 @@ export default { components: { Avatar } };
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background-color: #ec5252;
+        background-color: var(--c-red);
         position: absolute;
         right: 1px;
         border: 1px solid var(--theme-bg);
@@ -96,7 +110,7 @@ export default { components: { Avatar } };
     border-radius: 50%;
   }
   &-name {
-    color: #fff;
+    color: var(--c-text);
     font-size: 14px;
     margin: 0 6px 0 12px;
     @media screen and (max-width: 575px) {
