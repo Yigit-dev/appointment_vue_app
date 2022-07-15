@@ -1,6 +1,8 @@
 <template>
   <div class="sidebar">
-    <span class="logo">LS</span>
+    <span class="logo">
+      <CustomText size="m">LS</CustomText>
+    </span>
     <a class="logo-expand" href="#">
       <CustomText size="xl">Mini CRM</CustomText>
     </a>
@@ -58,7 +60,7 @@ export default { components: { ThemeButton, CustomText } };
     width: 30px;
     height: 30px;
     flex-shrink: 0;
-    color: #fff;
+    color: var(--c-text);
     align-items: center;
     border-radius: 50%;
     justify-content: center;
