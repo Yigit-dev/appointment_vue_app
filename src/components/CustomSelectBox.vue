@@ -62,7 +62,7 @@ export default {
 }
 
 .custom-select .selected {
-  background-color: var(--c-selectbox);
+  background-color: var(--c-input);
   border-radius: 12px;
   /* border: 1px solid var(--border-color); */
   color: var(--c-text);
@@ -93,7 +93,7 @@ export default {
   border-radius: 7px;
   overflow: hidden;
   position: absolute;
-  background-color: var(--c-selectbox);
+  background-color: var(--c-input);
   padding: 1.5em;
   left: 0;
   right: 0;
