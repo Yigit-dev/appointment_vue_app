@@ -72,7 +72,7 @@ export default {
 }
 
 .custom-select .selected.open {
-  /* border: 1px solid var(--border-color); */
+  border: 1px solid var(--brand-color);
   border-radius: 12px;
 }
 
