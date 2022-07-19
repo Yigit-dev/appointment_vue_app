@@ -22,8 +22,10 @@ export default {
 </script>
 <style scoped>
 button {
+  width: 100%;
+  max-width: 120px;
   border-radius: 8px;
-  color: var(--c-text);
+  color: #fff;
 }
 .normal {
   padding: 14px;

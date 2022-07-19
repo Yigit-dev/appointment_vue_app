@@ -1,8 +1,10 @@
 <template>
+  <label>{{ label }}</label>
   <div class="custom-select" :tabindex="tabindex" @blur="open = false">
     <div class="selected" :class="{ open: open }" @click="open = !open">
       {{ selected }}
     </div>
+
     <div class="items" :class="{ selectHide: !open }">
       <div
         v-for="(option, i) of options"
@@ -34,6 +36,9 @@ export default {
       type: Number,
       required: false,
       default: 0,
+    },
+    label: {
+      type: String,
     },
   },
   data() {

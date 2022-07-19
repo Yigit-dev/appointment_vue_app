@@ -1,9 +1,22 @@
 <template>
-  <input type="text" />
+  <label>{{ label }}</label>
+  <input :type="type" />
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    label: {
+      type: String,
+    },
+    type: {
+      type: String,
+      default: "text",
+      validator: (value) =>
+        ["text", "email", "checkbox", "tel"].indexOf(value) !== -1,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
