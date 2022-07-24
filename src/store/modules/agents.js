@@ -1,26 +1,28 @@
-import { appAxios } from '@/utils/appAxios'
+import { appAxios } from "@/utils/appAxios";
 
 export default {
   state: {
-    agents: []
+    agents: [],
   },
-  getters: {},
+  getters: {
+    _agent: (state) => state.agents.map((item) => item.fields),
+  },
   mutations: {
     LOAD_AGENTS(state, data) {
-      state.agents = data.records
-    }
+      state.agents = data.records;
+    },
   },
   actions: {
-    loadAgents({ commit }) {
-      appAxios
-        .get('/Agents')
+    async loadAgents({ commit }) {
+      await appAxios
+        .get("/Agents")
         .then((response) => {
-          commit('LOAD_AGENTS', response.data)
+          commit("LOAD_AGENTS", response.data);
         })
         .catch((error) => {
-          console.log(error)
-        })
-    }
+          console.log(error);
+        });
+    },
   },
-  modules: {}
-}
+  modules: {},
+};

@@ -1,57 +1,56 @@
-import { appAxios } from '@/utils/appAxios'
+import { appAxios } from "@/utils/appAxios";
 
 export default {
   state: {
-    appointments: []
+    appointments: [],
   },
   getters: {},
   mutations: {
     LOAD_APPOINTMENTS(state, data) {
-      state.appointments = data.records
-    }
+      state.appointments = data.records;
+    },
   },
   actions: {
     loadAppointments({ commit }) {
       appAxios
-        .get('/Appointments')
+        .get("/Appointments")
         .then((response) => {
-          commit('LOAD_APPOINTMENTS', response.data)
+          commit("LOAD_APPOINTMENTS", response.data);
         })
         .catch((error) => {
-          console.log(error)
-        })
+          console.log(error);
+        });
     },
     createAppointment({ state }, payload) {
-      console.log(state)
+      console.log(state);
       appAxios
-        .post('/Appointments', payload)
+        .post("/Appointments", payload)
         .then((response) => {
-          console.log(response)
+          console.log(response);
         })
         .catch((error) => {
-          console.log(error)
-        })
+          console.log(error);
+        });
     },
     updateAppointment({ state }, payload) {
-      console.log(state)
-      console.log('t', payload)
+      console.log(state);
       try {
-        appAxios.patch('/Appointments', payload)
+        appAxios.patch("/Appointments", payload);
       } catch (err) {
-        console.log(err)
+        console.log(err);
       }
     },
     deleteAppointment({ state }, id) {
-      console.log(state)
+      console.log(state);
       try {
-        appAxios.delete('/Appointments/' + id)
+        appAxios.delete("/Appointments/" + id);
       } catch (err) {
-        console.log(err)
+        console.log(err);
       }
-    }
+    },
   },
-  modules: {}
-}
+  modules: {},
+};
 
 /*
   *******************************
