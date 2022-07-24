@@ -9,5 +9,8 @@
 
 export default {
   name: "HomeView",
+  created() {
+    this.$store.dispatch("loadAppointments");
+  },
 };
 </script>
