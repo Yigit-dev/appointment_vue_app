@@ -1,10 +1,15 @@
 <template>
   <label>{{ label }}</label>
-  <input :type="type" />
+  <input
+    :type="type"
+    @input="$emit('update:modelValue', $event.target.value)"
+    :value="modelValue"
+  />
 </template>
 
 <script>
 export default {
+  emits: ["update:modelValue"],
   props: {
     label: {
       type: String,
@@ -14,6 +19,11 @@ export default {
       default: "text",
       validator: (value) =>
         ["text", "email", "checkbox", "tel"].indexOf(value) !== -1,
+    },
+    modelValue: {
+      type: String,
+      default: "",
+      required: true,
     },
   },
 };

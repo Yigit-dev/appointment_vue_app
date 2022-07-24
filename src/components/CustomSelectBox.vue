@@ -7,21 +7,29 @@
 
     <div class="items" :class="{ selectHide: !open }">
       <div
-        v-for="(option, i) of options"
-        :key="i"
+        v-for="option of options"
+        :key="option.agent_id"
         @click="
-          selected = option;
+          selected = option.agent_name + ' ' + option.agent_surname;
           open = false;
-          $emit('input', option);
+          $emit('data', {
+            agent_id: option.agent_id,
+            agent_name: option.agent_name,
+            agent_surname: option.agent_surname,
+          });
         "
       >
-        {{ option }}
+        <CustomText
+          >{{ option.agent_name }} {{ option.agent_surname }}</CustomText
+        >
       </div>
     </div>
   </div>
 </template>
 <script>
+import CustomText from "@/components/CustomText.vue";
 export default {
+  components: { CustomText },
   props: {
     options: {
       type: Array,
@@ -62,8 +70,8 @@ export default {
   width: 100%;
   text-align: left;
   outline: none;
-  height: 47px;
-  line-height: 47px;
+  height: 36px;
+  line-height: 36px;
 }
 
 .custom-select .selected {
@@ -96,7 +104,8 @@ export default {
 .custom-select .items {
   color: var(--c-text);
   border-radius: 7px;
-  overflow: hidden;
+  overflow: auto;
+  max-height: 187px;
   position: absolute;
   background-color: var(--c-input);
   padding: 1.5em;
@@ -114,6 +123,7 @@ export default {
   user-select: none;
   border-radius: 12px;
   transition: 200ms all ease;
+  text-transform: capitalize;
 }
 
 .custom-select .items div:hover {
